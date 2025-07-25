@@ -3,12 +3,9 @@ project(CustomDB)
 
 set(CMAKE_CXX_STANDARD 17)
 
-include_directories(${PROJECT_SOURCE_DIR}/db)
+include_directories(src)
 
-file(GLOB SOURCES 
-    ${PROJECT_SOURCE_DIR}/*.cpp 
-    ${PROJECT_SOURCE_DIR}/db/*.cpp
-)
+file(GLOB SOURCES src/*.cpp src/db/*.cpp)
 
 add_executable(customdb ${SOURCES})
 
