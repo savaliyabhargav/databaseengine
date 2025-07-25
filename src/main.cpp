@@ -1,19 +1,11 @@
-#include "db/db_engine.h"
 #include <iostream>
+#include "db/db_engine.h"
 
 int main() {
-    DatabaseEngine engine;
-    std::string command;
+    std::cout << "Starting CustomDB..." << std::endl;
 
-    std::cout << "Welcome to CustomDB CLI\n";
-
-    while (true) {
-        std::cout << ">> ";
-        std::getline(std::cin, command);
-        if (command == "exit" || command == "quit")
-            break;
-        engine.execute(command);
-    }
+    DBEngine engine;
+    engine.test();
 
     return 0;
 }
